@@ -51,7 +51,7 @@ const projects = [
     tech: ["React Native", "Zustand", "MMKV", "Firebase", "TypeScript"],
     stats: "Play Store Ready",
     images: [expense1, expense2, expense3, expense4, expense5],
-   video: "/ExpenseTracker.mp4",
+  video: "https://www.youtube.com/embed/DGf4wAS8Jok",
   },
   {
     title: "App Lock",
@@ -61,7 +61,7 @@ const projects = [
     tech: ["React Native", "TypeScript"],
     stats: "React Native",
     images: [appLock1, appLock2, appLock3],
-   video: "/AppLock.mp4",
+  video: "https://www.youtube.com/embed/u1zkwQ94fDY",
   },
 ]
 
@@ -175,34 +175,34 @@ function ProjectCard({ project }) {
         </>
       )}
 
-      {/* Demo Video Button */}
-      {project.video && (
-        <div className="mt-2">
-          {!showVideo ? (
-            <button
-              onClick={() => setShowVideo(true)}
-              className="flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold px-6 py-2.5 rounded-full transition-colors"
-            >
-              <span>▶</span> Watch Demo Video
-            </button>
-          ) : (
-            <div className="flex flex-col items-center gap-4">
-              <video
-                src={project.video}
-                controls
-                autoPlay
-                className="h-96 rounded-xl border border-gray-700 shadow-lg"
-              />
-              <button
-                onClick={() => setShowVideo(false)}
-                className="text-gray-400 hover:text-white text-sm transition-colors"
-              >
-                Hide Video
-              </button>
-            </div>
-          )}
-        </div>
-      )}
+    {project.video && (
+  <div className="mt-2">
+    {!showVideo ? (
+      <button
+        onClick={() => setShowVideo(true)}
+        className="flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold px-6 py-2.5 rounded-full transition-colors"
+      >
+        <span>▶</span> Watch Demo Video
+      </button>
+    ) : (
+      <div className="flex flex-col items-center gap-4">
+        <iframe
+          src={project.video}
+          title="Demo Video"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+          className="w-full max-w-sm h-96 rounded-xl border border-gray-700 shadow-lg"
+        />
+        <button
+          onClick={() => setShowVideo(false)}
+          className="text-gray-400 hover:text-white text-sm transition-colors"
+        >
+          Hide Video
+        </button>
+      </div>
+    )}
+  </div>
+)}
 
       {/* Lightbox */}
       {lightboxIndex !== null && (
