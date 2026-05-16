@@ -1,11 +1,11 @@
 import { useState } from "react"
 
-import appLockVideo from "../assets/app-lock/AppLock.mp4"
+
 import appLock1 from "../assets/app-lock/AppLock1.jpeg"
 import appLock2 from "../assets/app-lock/AppLock2.jpeg"
 import appLock3 from "../assets/app-lock/AppLock3.jpeg"
 
-import expenseVideo from "../assets/expense-tracker/ExpenseTracker.mp4"
+
 import expense1 from "../assets/expense-tracker/ExpenseTracker1.jpeg"
 import expense2 from "../assets/expense-tracker/ExpenseTracker2.jpeg"
 import expense3 from "../assets/expense-tracker/ExpenseTracker3.jpeg"
@@ -51,7 +51,7 @@ const projects = [
     tech: ["React Native", "Zustand", "MMKV", "Firebase", "TypeScript"],
     stats: "Play Store Ready",
     images: [expense1, expense2, expense3, expense4, expense5],
-    video: expenseVideo,
+   video: "/ExpenseTracker.mp4",
   },
   {
     title: "App Lock",
@@ -61,7 +61,7 @@ const projects = [
     tech: ["React Native", "TypeScript"],
     stats: "React Native",
     images: [appLock1, appLock2, appLock3],
-    video: appLockVideo,
+   video: "/AppLock.mp4",
   },
 ]
 
